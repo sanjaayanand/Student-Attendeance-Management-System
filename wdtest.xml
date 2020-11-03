@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="student.xsl" type="text/xsl"?>
+<student
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="newXmlSchema.xsd">
+ <stu stuid="id_1">
+ <id>001</id>
+ <name>sam</name>
+ <department>MCA</department>
+ <email>sam@gmail.com</email>
+ <mobileNumber>9654213252</mobileNumber>
+ 
+ </stu>
+
+ <stu stuid="id_2">
+ 	<id>002</id>
+ <name>Mala</name>
+ <department>MCA</department>
+ <email>mala@gmail.com</email>
+ <mobileNumber>965412582</mobileNumber>
+ 
+ </stu>
+
+ <stu stuid="id_3">
+ 	<id>003</id>
+ <name>bala</name>
+ <department>MCA</department>
+ <email>bala@gmail.com</email>
+ <mobileNumber>9548754122</mobileNumber> 
+ </stu>
+
+ <stu stuid="id_4">
+ 	<id>004</id>
+ <name>guru</name>
+ <department>MCA</department>
+ <email>guru@gmail.com</email>
+ <mobileNumber>9874561230</mobileNumber> 
+ </stu>
+
+ <stu stuid="id_5">
+ 	<id>005</id>
+ <name>aniq</name>
+ <department>MCA</department>
+ <email>aniq@gmail.com</email>
+ <mobileNumber>9784512421</mobileNumber> 
+ </stu>
+</student>
