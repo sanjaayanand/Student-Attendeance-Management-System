@@ -16,6 +16,42 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
 	<style type="text/css">
 		
 		body{
@@ -36,8 +72,8 @@
 			font-size: 20px;
 		}
 		a{
-			color: white;
-			size:20px; 
+			color: red;
+			text-decoration-size:40px; 
 		}
 		div {
   width: 320px;
@@ -79,14 +115,7 @@ li a:hover:not(.active) {
     background-color: grey;
 }
 
-.active {
-    background-color: grey;
-}
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
+
 ul.b {
   list-style-type: square;
 }
@@ -94,7 +123,7 @@ ul.b {
 	</style>
 	<title>First static page.</title>
 </head>
-<body>
+<body onload="checkCookie()">
 	
 	<center><img src="A.png"></center>
 	
@@ -102,7 +131,8 @@ ul.b {
 		<center>
 <h2>ATTENDANCE MANAGEMENT SYSTEM</h2>
 <a href="re.html">Registration page</a>
-<p><p class="style">Attendance Management System </p> is software developed for daily student attendance inschools, colleges and institutes. If facilitates to access the attendance information of aparticular student in a particular class. ... This system will also help inevaluating attendance eligibility criteria of a student.<a href="https://fedena.com/blog/2018/06/why-does-your-institute-need-an-attendance-management-system.html">click this link to now more</a></p>
+<p>Attendance Management System is software developed for daily student attendance inschools, colleges and institutes. If facilitates to access the attendance information of aparticular student in a particular class. ... This system will also help inevaluating attendance eligibility criteria of a student.
+<br><a href="https://fedena.com/blog/2018/06/why-does-your-institute-need-an-attendance-management-system.html">click this link to now more</a></p>
 </center>
 </section>
 <hr>
@@ -150,7 +180,7 @@ ul.b {
 </iframe>
 </center>
 	<hr>
-	<center><a href="wdtest.xml">For More Details please here</a></center>
+	<center><button class="btn btn-success" onclick="loadXML()">Click Here for Employee Details</button></center>
 <hr>
 </body>
 </html>
