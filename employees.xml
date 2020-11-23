@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<company>
+	<employees_details>
+		<employees_name>sanjay</employees_name>
+		<designation>system admin</designation>
+		<phone_number>8541351245</phone_number>
+	</employees_details>
+	<employees_details>
+		<employees_name>John</employees_name>
+		<designation>tester</designation>
+		<phone_number>875423658</phone_number>
+	</employees_details>
+	<employees_details>
+		<employees_name>rock</employees_name>
+		<designation>team leader</designation>
+		<phone_number>5487245635</phone_number>
+	</employees_details>
+</company>
