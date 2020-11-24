@@ -39,12 +39,13 @@ function myFunction(xml) {
   for (i = 0; i< x.length; i++) {
     txt += x[i].childNodes[0].nodeValue + "<br>";
   }
-  document.getElementById("demo").innerHTML = txt;
+  document.getElementById("display").innerHTML = txt;
 }
 </script>
 	<title></title>
 </head>
 <body>
 <button onclick="loadXML()" class="btn">click here</button>
+	<br><p id="display"></p>
 </body>
 </html>
