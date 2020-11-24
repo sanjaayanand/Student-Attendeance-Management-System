@@ -16,30 +16,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script>
-function loadXML() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
-    }
-  };
-  xmlhttp.open("GET", "employees.xml", true);
-  xmlhttp.send();
-}
-
-function myFunction(xml) {
-  var x, i, xmlDoc, txt;
-  xmlDoc = xml.responseXML;
-  txt = "";
-  x = xmlDoc.getElementsByTagName("employees_name");
-  for (i = 0; i< x.length; i++) {
-    txt += x[i].childNodes[0].nodeValue + "<br>";
-  }
-  document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
+	
 <script>
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
@@ -158,7 +135,7 @@ ul.b {
 <p>Attendance Management System is software developed for daily student attendance inschools, colleges and institutes. If facilitates to access the attendance information of aparticular student in a particular class. ... This system will also help inevaluating attendance eligibility criteria of a student.
 <br><a href="https://fedena.com/blog/2018/06/why-does-your-institute-need-an-attendance-management-system.html">click this link to now more</a></p>
 			<br>
-			<button type="button" class="btn btn-success" onclick="loadXML()">Click Here for Employee Details</button>
+			<a href="dom.html">list of students</a>
 </center>
 </section>
 <hr>
